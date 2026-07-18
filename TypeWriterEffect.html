@@ -1,0 +1,9 @@
+<h2 id="typed-output" style="font-family: monospace; white-space: pre-wrap;"></h2><style>#caret {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}</style><script>function typeLines({elementId:e,lines:t,charDelay:n=30,linePause:o=800}){const i=document.getElementById(e);i.textContent="",i.innerHTML="";const a=document.createElement("span");a.id="caret",a.textContent="|",i.appendChild(a);let s=0;function l({text:e,bold:t}){return new Promise(s=>{let l=0;const r=document.createElement(t?"strong":"span");i.insertBefore(r,a),function t(){l<e.length?(r.textContent+=e[l++],setTimeout(t,n)):(i.insertBefore(document.createElement("br"),a),setTimeout(s,o))}()})}!async function(){for(;s<t.length;)await l(t[s]),s++;a.remove()}()}typeLines({elementId:"typed-output",lines:[{text:"Table of Contents",bold:!0},{text:"1. Introduction. I develop custom graphical functions to meet novel visualization needs, such as creating Sankey diagrams to illustrate flow between different stages. Proficient in Python, R, SQL, TensorFlow, and Tableau for modeling and visualization."},{text:"2. Methods"},{text:"3. Results"}],charDelay:10,linePause:250}),setTimeout(()=>{typeLines({elementId:"typed-output",lines:[{text:"Updated Summary:",bold:!0},{text:"A. Context"},{text:"B. Framework"},{text:"C. Conclusion"}],charDelay:40,linePause:600})},2e4)</script>
